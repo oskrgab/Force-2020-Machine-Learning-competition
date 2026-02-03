@@ -1,5 +1,4 @@
 #%% Imports
-from this import d
 import polars as pl
 from pathlib import Path
 #%% 
@@ -61,7 +60,7 @@ wells_dir = data_path / "wells"
 wells_dir.mkdir(exist_ok=True)
 
 for well in well_names:
-    safe_name = str(well).replace("/", "-")
+    safe_name = str(well).replace("/", "-").replace(" ", "_")
     (
         data_all
         .filter(pl.col("WELL") == well)
