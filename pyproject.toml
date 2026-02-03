@@ -1,0 +1,15 @@
+[project]
+name = "force-2020-machine-learning-competition"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "polars>=1.37.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]
